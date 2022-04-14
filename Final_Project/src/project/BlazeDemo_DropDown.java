@@ -5,6 +5,7 @@ import org.testng.annotations.BeforeTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.AfterTest;
@@ -38,26 +39,31 @@ public class BlazeDemo_DropDown
 		 Thread.sleep(2000);
 		 driver.findElement(By.xpath("/html/body/div[2]/table/tbody/tr[3]/td[1]/input")).sendKeys(Keys.ENTER);
 		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[1]/div/input")).sendKeys("Roshiny");
+		 driver.findElement(By.xpath("/html/body/div[2]/form/div[1]/div/input")).sendKeys("Ashwini");
 		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[2]/div/input")).sendKeys("Ganeshnagar");
+		 driver.findElement(By.xpath("/html/body/div[2]/form/div[2]/div/input")).sendKeys("Tirupattur");
 		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[3]/div/input")).sendKeys("Chennai");
+		 driver.findElement(By.xpath("/html/body/div[2]/form/div[3]/div/input")).sendKeys("Vellore");
 		 Thread.sleep(2000);
 		 driver.findElement(By.xpath("/html/body/div[2]/form/div[4]/div/input")).sendKeys("TamilNadu");
 		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[5]/div/input")).sendKeys("600071");
+		 driver.findElement(By.xpath("/html/body/div[2]/form/div[5]/div/input")).sendKeys("635653");
 		 Thread.sleep(2000);
 		 s=new Select(driver.findElement(By.xpath("//*[@id=\"cardType\"]")));
 		 s.selectByIndex(1);
 		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[7]/div/input")).sendKeys("45555");
-		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[8]/div/input")).sendKeys("02");
+		 
+		 WebElement aa = driver.findElement(By.xpath("/html/body/div[2]/form/div[7]/div/input")); //Enter number
+		 String a = Keys.chord(Keys.CONTROL, "a");
+		 aa.sendKeys(a);
+		 aa.sendKeys("3435");
+		 Thread.sleep(1000);
+		 
+		 driver.findElement(By.xpath("/html/body/div[2]/form/div[8]/div/input")).sendKeys("01");
 		 Thread.sleep(2000);
 		 driver.findElement(By.xpath("/html/body/div[2]/form/div[9]/div/input")).sendKeys("2022");
 		 Thread.sleep(2000);
-		 driver.findElement(By.xpath("/html/body/div[2]/form/div[10]/div/input")).sendKeys("Roshiny");
+		 driver.findElement(By.xpath("/html/body/div[2]/form/div[10]/div/input")).sendKeys("Ashwini");
 		 Thread.sleep(2000);
 		 driver.findElement(By.xpath("/html/body/div[2]/form/div[11]/div/label/input")).click();
 		 Thread.sleep(2000);
